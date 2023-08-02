@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-container {
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Hide the signup form by default */
+#signup-container {
+  display: none;
+}
+
+/* Style the "Back to Login" button */
+#show-login {
+  background-color: #dc3545; /* Red color */
+  margin-top: 10px;
+}
+
+#show-login:hover {
+  background-color: #c82333; /* Darker red color */
+}
