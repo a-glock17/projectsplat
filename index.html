@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login and Signup</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <button id="show-signup">Sign Up</button>
+    </div>
+    <div class="form-container" id="signup-container">
+      <h2>Signup</h2>
+      <form id="signup-form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Signup</button>
+      </form>
+      <button id="show-login">Back to Login</button>
+    </div>
+  </div>
+  <!-- inline JS for login, is currently dummy and useless -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+    const loginContainer = document.getElementById("login-container");
+    const signupContainer = document.getElementById("signup-container");
+    const showSignupBtn = document.getElementById("show-signup");
+    const showLoginBtn = document.getElementById("show-login");
+
+    showSignupBtn.addEventListener("click", function () {
+      loginContainer.style.display = "none";
+      signupContainer.style.display = "block";
+    });
+
+    showLoginBtn.addEventListener("click", function () {
+      loginContainer.style.display = "block";
+      signupContainer.style.display = "none";
+    });
+
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = loginForm.elements[0].value;
+      const password = loginForm.elements[1].value;
+      // login logic here using  username and password
+      // for simplicity just display an alert
+      alert(`Login: Username - ${username}, Password - ${password}`);
+    });
+
+    signupForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const username = signupForm.elements[0].value;
+      const password = signupForm.elements[1].value;
+      const confirmPassword = signupForm.elements[2].value;
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+      // logic here using the username and password from usr
+      // for simplicity just display an alert
+      alert(`Signup: Username - ${username}, Password - ${password}`);
+    });
+  });
+</script>
+
+</body>
+</html>
