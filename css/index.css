@@ -12,7 +12,7 @@ body {
   flex-direction: row;
 }
 
-.form-container {
+.form-login, .form-signup {
   padding: 20px;
   margin: 10px;
   border: 1px solid #ccc;
@@ -33,7 +33,7 @@ input {
   margin-bottom: 10px;
 }
 
-button {
+button, a {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
@@ -46,17 +46,11 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Hide the signup form by default */
-#signup-container {
-  display: none;
-}
-
-/* Style the "Back to Login" button */
-#show-login {
-  background-color: #dc3545; /* Red color */
-  margin-top: 10px;
-}
-
 #show-login:hover {
   background-color: #c82333; /* Darker red color */
+}
+
+.switch {
+  text-align: center;
+  margin-top: 20px;
 }
